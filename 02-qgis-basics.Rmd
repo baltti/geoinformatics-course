@@ -30,17 +30,17 @@
 
 Кроме подложки по умолчанию, можно подключить дополнительные тайлы. Для этого нужно щеклнуть правой кнопкой мыши на XYZ Tiles и выбрать пункт *Подключить*. Далее в диалоговом окне обязательно нужно указать имя подключения и ссылку. Можно воспользоваться подложками Google по следуюшим ссылкам:
 
--   [карта улиц и дорог [http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}](http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z})]{.ul}
+-   карта улиц и дорог [[http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}]{.ul}](#sent/_blank)
 
--   рельеф [[[http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}]{.ul}](http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z})](#sent/_blank)
+-   рельеф [http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}](#sent/_blank)
 
--   модифицированная карта улиц и дорог [[[http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}]{.ul}](http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z})](#sent/_blank)
+-   модифицированная карта улиц и дорог [http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}](#sent/_blank)
 
--   только спутниковое изображение [[[http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}]{.ul}](http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z})](#sent/_blank)
+-   только спутниковое изображение[http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}](#sent/_blank)
 
--   только рельеф [[[http://mt0.google.com/vt/lyrs=t&hl=en&x={x}&y={y}&z={z}]{.ul}](http://mt0.google.com/vt/lyrs=t&hl=en&x={x}&y={y}&z={z})](#sent/_blank)
+-   только рельеф [http://mt0.google.com/vt/lyrs=t&hl=en&x={x}&y={y}&z={z}](#sent/_blank)
 
--   гибридное изображение [[[http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}]{.ul}](http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z})](#sent/_blank)
+-   гибридное изображение [http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}](#sent/_blank)
 
 Также подложку можно добавить с помощью модуля *QuickMapServices*. Этот модуль нужно предварительно установить с помощью команды из строки меню **«Модули»→Управление модулями**, далее в открывшемся диалоговом окне в строке поиска набрать название модуля и после нахождения модуля, нажать Установить (Install).
 
@@ -69,7 +69,7 @@
 ```
 Также про проекции есть выпуск веб-комикса [xkcd](https://xkcd.com/977/).
 
-![](https://imgs.xkcd.com/comics/map_projections.png)
+![](figures/map_projections.png)
 
 Как уже было сказано чуть выше самой распространенной проекцией, с которой большинство из нас сталкивается практически ежедневно, является `EPSG:3857 - WGS 84 / Pseudo Mercator.` В этой проекции очень велики искажения размеров, особенно в приполярных областях, так как она является цилиндрической. То есть при ее создании земной шар помещается внутрь цилиндра, который соприкасается с ним на экваторе, после чего все проецируется на поверхность цилиндра и он разворачивается на плоскость.
 
