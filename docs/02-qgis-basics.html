@@ -97,7 +97,7 @@
 <li class="chapter" data-level="7.3" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html#оверлейные-операции"><i class="fa fa-check"></i><b>7.3</b> Оверлейные операции</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="07-temporal-controller.html"><a href="07-temporal-controller.html"><i class="fa fa-check"></i><b>8</b> Работа со слоями, в которых есть временная составляющая</a></li>
-<li class="chapter" data-level="9" data-path="08-interpolation.html"><a href="08-interpolation.html"><i class="fa fa-check"></i><b>9</b> Интеропляция</a></li>
+<li class="chapter" data-level="9" data-path="08-interpolation.html"><a href="08-interpolation.html"><i class="fa fa-check"></i><b>9</b> Интерполяция</a></li>
 <li class="chapter" data-level="10" data-path="09-DEM.html"><a href="09-DEM.html"><i class="fa fa-check"></i><b>10</b> Цифровые модели рельефа</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="09-DEM.html"><a href="09-DEM.html#морфометрический-анализ-рельефа"><i class="fa fa-check"></i><b>10.1</b> Морфометрический анализ рельефа</a></li>
@@ -142,12 +142,12 @@
 <p><img src="figures/5.PNG" /></p>
 <p>Кроме подложки по умолчанию, можно подключить дополнительные тайлы. Для этого нужно щеклнуть правой кнопкой мыши на XYZ Tiles и выбрать пункт <em>Подключить</em>. Далее в диалоговом окне обязательно нужно указать имя подключения и ссылку. Можно воспользоваться подложками Google по следуюшим ссылкам:</p>
 <ul>
-<li><p><u>карта улиц и дорог <a href="http://mt0.google.com/vt/lyrs=m&amp;hl=en&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D">http://mt0.google.com/vt/lyrs=m&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</a></u></p></li>
-<li><p>рельеф <a href="#sent/_blank">[<u>http://mt0.google.com/vt/lyrs=p&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</u>](http://mt0.google.com/vt/lyrs=p&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z})</a></p></li>
-<li><p>модифицированная карта улиц и дорог <a href="#sent/_blank">[<u>http://mt0.google.com/vt/lyrs=r&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</u>](http://mt0.google.com/vt/lyrs=r&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z})</a></p></li>
-<li><p>только спутниковое изображение <a href="#sent/_blank">[<u>http://mt0.google.com/vt/lyrs=s&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</u>](http://mt0.google.com/vt/lyrs=s&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z})</a></p></li>
-<li><p>только рельеф <a href="#sent/_blank">[<u>http://mt0.google.com/vt/lyrs=t&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</u>](http://mt0.google.com/vt/lyrs=t&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z})</a></p></li>
-<li><p>гибридное изображение <a href="#sent/_blank">[<u>http://mt0.google.com/vt/lyrs=y&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</u>](http://mt0.google.com/vt/lyrs=y&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z})</a></p></li>
+<li><p>карта улиц и дорог <a href="#sent/_blank"><u>http://mt0.google.com/vt/lyrs=m&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</u></a></p></li>
+<li><p>рельеф <a href="#sent/_blank">http://mt0.google.com/vt/lyrs=p&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</a></p></li>
+<li><p>модифицированная карта улиц и дорог <a href="#sent/_blank">http://mt0.google.com/vt/lyrs=r&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</a></p></li>
+<li><p>только спутниковое изображение<a href="#sent/_blank">http://mt0.google.com/vt/lyrs=s&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</a></p></li>
+<li><p>только рельеф <a href="#sent/_blank">http://mt0.google.com/vt/lyrs=t&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</a></p></li>
+<li><p>гибридное изображение <a href="#sent/_blank">http://mt0.google.com/vt/lyrs=y&amp;hl=en&amp;x={x}&amp;y={y}&amp;z={z}</a></p></li>
 </ul>
 <p>Также подложку можно добавить с помощью модуля <em>QuickMapServices</em>. Этот модуль нужно предварительно установить с помощью команды из строки меню <strong>«Модули»→Управление модулями</strong>, далее в открывшемся диалоговом окне в строке поиска набрать название модуля и после нахождения модуля, нажать Установить (Install).</p>
 <p>После установки модуля на панели инструментов появятся две кнопки, с помощью которых можно добавлять в проект подложки из различных сервисов.</p>
@@ -166,7 +166,7 @@
 <p>От выбора проекции зависит степень искажения размеров, длин и углов. Есть мнение, что проекции создают нашу картину мира, о чем есть великий эпизод из сериала West Wing.</p>
 <iframe width="800" height="400" src="https://www.youtube.com/embed/vVX-PrBRtTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>Также про проекции есть выпуск веб-комикса <a href="https://xkcd.com/977/">xkcd</a>.</p>
-<p><img src="https://imgs.xkcd.com/comics/map_projections.png" /></p>
+<p><img src="figures/map_projections.png" /></p>
 <p>Как уже было сказано чуть выше самой распространенной проекцией, с которой большинство из нас сталкивается практически ежедневно, является <code>EPSG:3857 - WGS 84 / Pseudo Mercator.</code> В этой проекции очень велики искажения размеров, особенно в приполярных областях, так как она является цилиндрической. То есть при ее создании земной шар помещается внутрь цилиндра, который соприкасается с ним на экваторе, после чего все проецируется на поверхность цилиндра и он разворачивается на плоскость.</p>
 <p>Посмотреть, насколько искажаются размеры в привычной нам проекции можно на сайте <a href="https://thetruesize.com/">The True Size …</a></p>
 <p>Но в ГИС все не ограничивается только способом проецирования на плоскость, также важно как и задаются оси координат, где находится начало системы координат, какие единицы измерения используются, каков охват системы координат. Поэтому в ГИС говорят не просто о проекции, а о системе координат - <strong>coordinate reference system или crs</strong>.</p>
