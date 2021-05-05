@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 10 Цифровые модели рельефа | Основы геоинформатики</title>
+  <meta name="description" content=" 10 Цифровые модели рельефа | Основы геоинформатики" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 10 Цифровые модели рельефа | Основы геоинформатики" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="baltti/geoinformatics-course" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 10 Цифровые модели рельефа | Основы геоинформатики" />
+  
+  
+  
+
+<meta name="author" content="Балтыжакова Татьяна" />
+
+
+<meta name="date" content="2021-05-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="08-interpolation.html"/>
+
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Основы геоинформатики</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
+<li class="chapter" data-level="2" data-path="01-unfolded.html"><a href="01-unfolded.html"><i class="fa fa-check"></i><b>2</b> Создание карты без специализированного программного обеспечения</a></li>
+<li class="chapter" data-level="3" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html"><i class="fa fa-check"></i><b>3</b> Создание карты и редактирование стиля</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html#добавление-объектов-на-карту"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
+<li class="chapter" data-level="3.2" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html#системы-координат"><i class="fa fa-check"></i><b>3.2</b> Системы координат</a></li>
+<li class="chapter" data-level="3.3" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html#настройка-стиля-слоя"><i class="fa fa-check"></i><b>3.3</b> Настройка стиля слоя</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="03-grid.html"><a href="03-grid.html"><i class="fa fa-check"></i><b>4</b> Подсчет плотности объектов по сетке</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="03-grid.html"><a href="03-grid.html#построение-сетки"><i class="fa fa-check"></i><b>4.1</b> Построение сетки</a></li>
+<li class="chapter" data-level="4.2" data-path="03-grid.html"><a href="03-grid.html#подсчет-количества-объектов"><i class="fa fa-check"></i><b>4.2</b> Подсчет количества объектов</a></li>
+<li class="chapter" data-level="4.3" data-path="03-grid.html"><a href="03-grid.html#стилизация-слоя"><i class="fa fa-check"></i><b>4.3</b> Стилизация слоя</a></li>
+<li class="chapter" data-level="4.4" data-path="03-grid.html"><a href="03-grid.html#оформление-карты"><i class="fa fa-check"></i><b>4.4</b> Оформление карты</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="04-overpass.html"><a href="04-overpass.html"><i class="fa fa-check"></i><b>5</b> Загрузка данных через сервис overpass-turbo</a></li>
+<li class="chapter" data-level="6" data-path="05-square.html"><a href="05-square.html"><i class="fa fa-check"></i><b>6</b> Определение площади и периметра объектов</a></li>
+<li class="chapter" data-level="7" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html"><i class="fa fa-check"></i><b>7</b> Построение буферных зон и оверлейные операции</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html#буферные-зоны"><i class="fa fa-check"></i><b>7.1</b> Буферные зоны</a></li>
+<li class="chapter" data-level="7.2" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>7.2</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
+<li class="chapter" data-level="7.3" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html#оверлейные-операции"><i class="fa fa-check"></i><b>7.3</b> Оверлейные операции</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="07-temporal-controller.html"><a href="07-temporal-controller.html"><i class="fa fa-check"></i><b>8</b> Работа со слоями, в которых есть временная составляющая</a></li>
+<li class="chapter" data-level="9" data-path="08-interpolation.html"><a href="08-interpolation.html"><i class="fa fa-check"></i><b>9</b> Интеропляция</a></li>
+<li class="chapter" data-level="10" data-path="09-DEM.html"><a href="09-DEM.html"><i class="fa fa-check"></i><b>10</b> Цифровые модели рельефа</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="09-DEM.html"><a href="09-DEM.html#морфометрический-анализ-рельефа"><i class="fa fa-check"></i><b>10.1</b> Морфометрический анализ рельефа</a></li>
+<li class="chapter" data-level="10.2" data-path="09-DEM.html"><a href="09-DEM.html#создание-горизонталей"><i class="fa fa-check"></i><b>10.2</b> Создание горизонталей</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Основы геоинформатики</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="цифровые-модели-рельефа" class="section level1" number="10">
+<h1><span class="header-section-number"> 10</span> Цифровые модели рельефа</h1>
+<div id="морфометрический-анализ-рельефа" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Морфометрический анализ рельефа</h2>
+<p>Цифровые модели рельефа, как правило, строят либо по результатам интерполяции, либо на основе открытых данных.</p>
+<p>Самым распространенным источником данных о рельефе является цифровая модель рельефа SRTM (shuttle radar topographic mission). Эта цифровая модель была получена в 2000 году на основе спутниковой радарной съемки. Она охватывает планету между 54 градусами южной широты и 60 градусами северной широты. Подробнее на русском можно почитать про нее <a href="https://gis-lab.info/qa/srtm.html">здесь</a></p>
+<p>Скачать данные SRTM можно на сайте Геологической службы США (<a href="https://earthexplorer.usgs.gov/" class="uri">https://earthexplorer.usgs.gov/</a>) или с помощью плагина SRTM downloader.</p>
+<p>Для примера и выполнения работы были скачаны данные для окрестностей Эльбруса. Они находятся <a href="https://drive.google.com/file/d/1s57yc3rKQbZfFcM8TeWsI6t6HCc7412w/view?usp=sharing">здесь</a>.</p>
+<p>В каждой ячейке исходного растрового изображения содержится значение высоты.</p>
+<p>Добавление растрового слоя осуществляется через строку меню <strong>Слой - Добавить слой - Добавить растровый слой</strong>.</p>
+<p><img src="figures/65.png" /></p>
+<p>В результате должно появиться изображение рельефа в оттенках серого цвета.</p>
+<p><img src="figures/66.PNG" /></p>
+<p>Это изображение можно сделать цветным, для этого нужно открыть свойства слоя. В настройках стиля нужно выбрать тип изображения <em>Одноканальное псевдоцветно</em>е.</p>
+<p><img src="figures/67.PNG" /></p>
+<p>Градиент можно создать самостоятельно с помощью редактора.</p>
+<p>В результате будет получено изображение растра в цветах выбранного градиента.</p>
+<p><img src="figures/68.PNG" /></p>
+<p>С использованием такого растра может быть построена трехмерная поверхность, отображающая рельеф местности, а также выполнен ряд вычислений для морфометрического анализа рельефа. Для более наглядного отображения рельефа на карте рассчитывается теневой рельеф, который строится с использованием позиции источника направленного света.</p>
+<p><img src="figures/69.png" /></p>
+<p>В результате должно получиться что-то подобное.</p>
+<p><img src="figures/70.PNG" /></p>
+<p>Этот теневой рельеф можно использовать, чтобы добавить дополнительный объем подложке или исходному рельефу растра. Для этого нужно открыть свойства слоя с теневым рельефом и изменить режим смешивания на Добавление или Осветление (также можно поэкспериментировать с настройками яркости и контрастности).</p>
+<p><img src="figures/71.PNG" /></p>
+<p>Поверх исходного растра с рельефом получается подобный результат.</p>
+<p><img src="figures/72.PNG" /></p>
+<p>Рассчитаем крутизну склонов.</p>
+<p><img src="figures/73.png" /></p>
+<p>Так как на рассматриваемой местности довольно крутые склоны, лучше их считать в процентах, а не в градусах (Slope expressed as percent instead of degrees).</p>
+<p><img src="figures/74.PNG" /></p>
+<p>Результат определения крутизны склонов.</p>
+<p><img src="figures/75.PNG" /></p>
+<p>Это изображение мы также можем сделать цветным и наложить на него теневой рельеф для большего объема.</p>
+<p>Определим экспозицию склонов - ориентацию по сторонам света.</p>
+<p><img src="figures/76.png" /></p>
+<p><img src="figures/77.PNG" /></p>
+<p>Результат в цветном виде с наложенным поверх теневым рельефом.</p>
+<p><img src="figures/78.PNG" /></p>
+<p>Рассмотрим рельеф как трехмерную поверхность. Чтобы открыть трехмерный вид карты, нужно в строке меню выбрать <strong>Вид- Новая 3D карта</strong>. В данном случае была добалвена подложка со спутниковым изображением с теневым рельефом поверх.</p>
+<p><img src="figures/79.PNG" /></p>
+<p>Трехмерный вид открывается в отдельном окне программы, но если его повращать, то станет заметно, что карта все еще плоская. Чтобы поверхность стала трехмерной нужно нажать кнопку Configure… и выбрать тип DEM (raster layer), высота должна браться из исходного растра.</p>
+<p><img src="figures/80.PNG" /></p>
+<p>Полученная поверхность</p>
+<p><img src="figures/81.PNG" /></p>
+</div>
+<div id="создание-горизонталей" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Создание горизонталей</h2>
+<p>Из растра со значениями высот могут быть извлечены горизонтали</p>
+<p><img src="figures/82.png" /></p>
+<p>Расстояние между изолиниями - это фактически высота сечения рельефа, то есть через сколько мы будем проводить горизонтали.</p>
+<p><img src="figures/83.PNG" /></p>
+<p>Полученные изолинии</p>
+<p><img src="figures/84.PNG" /></p>
+<p>Настроим горизонтали таким образом, чтобы каждая пятая была утолщенной, добавим подписи и настроим их так, чтобы они были “головой вверх”.</p>
+<p>Начнем с настройки толщины линий. Для этого в свойствах слоя выберем настройку толщины в зависимости от выражения.</p>
+<p><img src="figures/85.png" /></p>
+<p>Далее пропишем логическое выражение: <strong>if(“ELEV”%500=0,0.7,0.3)</strong>. В этом выражении перед запятой прописано условие - высота горизонтали делится на 500 без остатка, потом толщина линии, если условие выполняется, и толщина, если условие не выполняется.</p>
+<p><img src="figures/86.PNG" /></p>
+<p>Результат</p>
+<p><img src="figures/87.PNG" /></p>
+<p>Добавим подписи.</p>
+<p><img src="figures/88.PNG" /></p>
+<p>Но при таком добавлении подписей, будут подписаны все горизонтали, а мы хотим подписать только утолщенные. Для этого нужно прописать выражение, подобное тому, что мы писали выше: <strong>if(“ELEV”%500=0,“ELEV”,"").</strong></p>
+<p><img src="figures/89.PNG" /></p>
+<p>Добавим белую обводку подписям, чтобы они не сливались с горизонталями</p>
+<p><img src="figures/90.PNG" /></p>
+<p>Сделаем так, чтобы они размещались на линии и изгибались в соответствии с ней.</p>
+<p><img src="figures/91.PNG" /></p>
+<p>И настроим подписи так, чтобы все они смотрели головой в сторону увеличения высоты.</p>
+<p><img src="figures/92.PNG" /></p>
+<p><img src="figures/93.PNG" /></p>
+<p>В результате получим горизонтали, где каждая пятая будет утолщена и подписана головой в сторону увеличения.</p>
+<p><img src="figures/94.PNG" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="08-interpolation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["manual.pdf", "manual.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

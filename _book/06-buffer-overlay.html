@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 7 Построение буферных зон и оверлейные операции | Основы геоинформатики</title>
+  <meta name="description" content=" 7 Построение буферных зон и оверлейные операции | Основы геоинформатики" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 7 Построение буферных зон и оверлейные операции | Основы геоинформатики" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="baltti/geoinformatics-course" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 7 Построение буферных зон и оверлейные операции | Основы геоинформатики" />
+  
+  
+  
+
+<meta name="author" content="Балтыжакова Татьяна" />
+
+
+<meta name="date" content="2021-05-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="05-square.html"/>
+<link rel="next" href="07-temporal-controller.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Основы геоинформатики</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
+<li class="chapter" data-level="2" data-path="01-unfolded.html"><a href="01-unfolded.html"><i class="fa fa-check"></i><b>2</b> Создание карты без специализированного программного обеспечения</a></li>
+<li class="chapter" data-level="3" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html"><i class="fa fa-check"></i><b>3</b> Создание карты и редактирование стиля</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html#добавление-объектов-на-карту"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
+<li class="chapter" data-level="3.2" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html#системы-координат"><i class="fa fa-check"></i><b>3.2</b> Системы координат</a></li>
+<li class="chapter" data-level="3.3" data-path="02-qgis-basics.html"><a href="02-qgis-basics.html#настройка-стиля-слоя"><i class="fa fa-check"></i><b>3.3</b> Настройка стиля слоя</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="03-grid.html"><a href="03-grid.html"><i class="fa fa-check"></i><b>4</b> Подсчет плотности объектов по сетке</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="03-grid.html"><a href="03-grid.html#построение-сетки"><i class="fa fa-check"></i><b>4.1</b> Построение сетки</a></li>
+<li class="chapter" data-level="4.2" data-path="03-grid.html"><a href="03-grid.html#подсчет-количества-объектов"><i class="fa fa-check"></i><b>4.2</b> Подсчет количества объектов</a></li>
+<li class="chapter" data-level="4.3" data-path="03-grid.html"><a href="03-grid.html#стилизация-слоя"><i class="fa fa-check"></i><b>4.3</b> Стилизация слоя</a></li>
+<li class="chapter" data-level="4.4" data-path="03-grid.html"><a href="03-grid.html#оформление-карты"><i class="fa fa-check"></i><b>4.4</b> Оформление карты</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="04-overpass.html"><a href="04-overpass.html"><i class="fa fa-check"></i><b>5</b> Загрузка данных через сервис overpass-turbo</a></li>
+<li class="chapter" data-level="6" data-path="05-square.html"><a href="05-square.html"><i class="fa fa-check"></i><b>6</b> Определение площади и периметра объектов</a></li>
+<li class="chapter" data-level="7" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html"><i class="fa fa-check"></i><b>7</b> Построение буферных зон и оверлейные операции</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html#буферные-зоны"><i class="fa fa-check"></i><b>7.1</b> Буферные зоны</a></li>
+<li class="chapter" data-level="7.2" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>7.2</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
+<li class="chapter" data-level="7.3" data-path="06-buffer-overlay.html"><a href="06-buffer-overlay.html#оверлейные-операции"><i class="fa fa-check"></i><b>7.3</b> Оверлейные операции</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="07-temporal-controller.html"><a href="07-temporal-controller.html"><i class="fa fa-check"></i><b>8</b> Работа со слоями, в которых есть временная составляющая</a></li>
+<li class="chapter" data-level="9" data-path="08-interpolation.html"><a href="08-interpolation.html"><i class="fa fa-check"></i><b>9</b> Интеропляция</a></li>
+<li class="chapter" data-level="10" data-path="09-DEM.html"><a href="09-DEM.html"><i class="fa fa-check"></i><b>10</b> Цифровые модели рельефа</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="09-DEM.html"><a href="09-DEM.html#морфометрический-анализ-рельефа"><i class="fa fa-check"></i><b>10.1</b> Морфометрический анализ рельефа</a></li>
+<li class="chapter" data-level="10.2" data-path="09-DEM.html"><a href="09-DEM.html#создание-горизонталей"><i class="fa fa-check"></i><b>10.2</b> Создание горизонталей</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Основы геоинформатики</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="построение-буферных-зон-и-оверлейные-операции" class="section level1" number="7">
+<h1><span class="header-section-number"> 7</span> Построение буферных зон и оверлейные операции</h1>
+<div id="буферные-зоны" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Буферные зоны</h2>
+<p>Буферизация обычно создает две области: одна в пределах  указанного расстояния от выбранного объекта реального мира, другая - вне. Область, которая находится в пределах указанного расстояния называется буферная зона.</p>
+<p>С помощью буферных зон может осуществляться построение радиусов обслуживания определенных объектов, радиусов распространения отдельных явлений, границ зон с особыми условиями использования территорий.</p>
+<p>Для создания буферной зоны необходимо убедиться, что проекция слоя позволяет измерение длин в метрической системе измерений, то есть в метрах. При необходимости слой нужно либо перепроецировать одноименным инструментом из панели инструментов анализа, либо просто пересохранить из контекстного меню слоя в нужной проекции командой <em>Сохранить как</em>.</p>
+<p>Предположим, что нам нужно определить, какие дома обслуживаются магазинами, а какие нет. Установим радиус обслуживания магазинов 150 метров.</p>
+<p>В нашем случае мы строим буферы вокруг магазинов, для которых система координат подразумевает измерения  в градусах, поэтому размер буфера мы сможем задать только в градусах.</p>
+<p><img src="figures/44.png" /></p>
+<p>Чтобы задавать размер буфера в метрах, нам нужно сначала перепроецировать исходный слой с помощью инструмента <em>Перепроецировать слой</em>. В качестве целевой системы координат можно выбрать системы <code>EPSG:3857</code>, результаты лучше сохранить в файл.</p>
+<p><img src="figures/45.png" /></p>
+<p>Новый перепроецированный слой будет отличаться от исходного только системой координат.</p>
+<p>Далее мы можем создать буферы размером 150 метров для магазинов на основе перепроецированного слоя (результаты лучше тоже сохранить в файл).</p>
+<p><img src="figures/46.png" /></p>
+<p>В результате должны получиться круги заданного радиуса вокруг магазинов.</p>
+<p><img src="figures/47.png" /></p>
+</div>
+<div id="поиск-объектов-попадающих-в-радиус-обслуживания" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Поиск объектов, попадающих в радиус обслуживания</h2>
+<p>Далее мы можем осуществить поиск домов, которые попадают в заданные области обслуживания.</p>
+<p>Для поиска объектов есть группа инструментов <em>Вектор-Выбор</em>.</p>
+<p><img src="figures/48.png" /></p>
+<p>Часть инструментов в ней начинается со слова Выбрать, а часть - Извлечь. Разница между ними в том, что в первом случае объекты просто выделяются в исходном слое, а во втором - объекты, соответствующие заданным условия, извлекаются в новый слой.</p>
+<p>Краткое описания инструментов:</p>
+<ul>
+<li><p>выбрать\извлечь по атрибуту - поиск объектов по значению одного из атрибутов;</p></li>
+<li><p>выбрать\извлечь по выражению - поиск объектов по значениям нескольких атрибутов одновременно;</p></li>
+<li><p>выбрать\извлечь по пространственному отношению - поиск объектов по их расположению относительно объектов другого слоя;</p></li>
+<li><p>выбрать\извлечь случайно - случайная выборка объектов из слоя (заданного числа объектов или заданного процента объектов);</p></li>
+<li><p>выбрать\извлечь случайно в подмножествах - сначала слой разбивается по категориям по одному из атрибутов, потом из каждой категории извлекается заданное число или заданный процент объектов.</p></li>
+</ul>
+<p>Нам  нужно определить, какие здания попадаются в буферные зоны, поэтому нужно воспользоваться выбрать\извлечь по пространственному отношению.</p>
+<p>Для выбора объектов нужно сначала указать в каком слое осуществляется поиск (слой со зданиями), геометрический оператор (как объекты расположены относительно объектов другого слоя) и слой для сравнения (буферные зоны). Геометрические операторы в данном случае лучше выбирать <em>Пересекает</em> и <em>В пределах</em>.</p>
+<p><img src="figures/49.png" /></p>
+<p>В результате выбранные объекты будут выделены желтым цветом на карте.</p>
+<p><img src="figures/50.png" /></p>
+<p>Функция Извлечь по пространственному отношению работает аналогично с почти теми же характеристиками, кроме того, что вы можете выбрать сохранить результаты во временный слой или в файл.</p>
+<p><img src="figures/51.png" /></p>
+<p>В результате вы получите новый слой, в котором будут содержаться только те объекты, которые соответствуют заданному условию.</p>
+<p><img src="figures/52.png" /></p>
+</div>
+<div id="оверлейные-операции" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Оверлейные операции</h2>
+<p>Оверлейные операции являются одним из основных способов пространственного анализа. Название этих операций произошло от слова overlay - наложение. Суть оверлейных операций состоит в том, что два слоя накладываются друг на друга, после чего осуществляется какая-то операция (разность, обрезка и т.п.) в результате чего создается результирующий новый слой.</p>
+<p>В QGIS можно выполнить следующие оверлейные операции: <em>Обрезать, Пересечение, Объединение, Симметричная разность, Разность</em>.</p>
+<p>Проиллюстрирую работу различных операций на основе буферных зон вокруг магазинов (500 м) и квадратов сетки.</p>
+<p>Исходные слои</p>
+<p><img src="figures/53.PNG" /></p>
+<p>При выполнении команды <em>Пересечение</em> в выходном слое содержатся только участки, в которых оба слоя пересекаются.</p>
+<p><img src="figures/54.PNG" /></p>
+<p>Команда <em>Объединение</em> совмещает слои таким образом, что в выходном слое содержатся как участки пересечения, так и участки, принадлежащие только одному из слоев.</p>
+<p><img src="figures/55.PNG" /></p>
+<p>Команда <em>Симметричная разность</em> оставляет в выходном слое только те участки, в которых исходные слои не пересекаются.</p>
+<p><img src="figures/56.PNG" /></p>
+<p>Команда <em>Обрезать</em> совмещает слои таким образом, что в выходном слое содержатся только те участки, которые пересекаются со слоем отсечения. Принципиальное отличие этой команды от пересечения в том, что сохраняется исходная геометрия объектов, тогда как при пересечении исходные объекты дополнительно рассекаются объектами накладывающегося слоя.</p>
+<p><img src="figures/57.PNG" /></p>
+<p>Команда <em>Разность</em> совмещает слои таким образом, что в выходном слое содержатся только те участки, которые не пересекаются со слоем отсечения.</p>
+<p><img src="figures/58.PNG" /></p>
+<blockquote>
+<p>Важно помнить, что результат оверлейных операций зависит от того, какой слой будет указан первым (будет исходным), а какой вторым (будет накладываться). В приведенных примерах везде слой буферных зон был исходным, а накладывался слой с сеткой.</p>
+</blockquote>
+<p>Все оверлейные операции находятся с панели инструментов в группе Вектор-Оверлей. Подробнее с примерами можно прочесть <a href="https://docs.qgis.org/3.10/ru/docs/user_manual/processing_algs/qgis/vectoroverlay.html"><u>https://docs.qgis.org/3.10/ru/docs/user_manual/processing_algs/qgis/vectoroverlay.html</u></a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="05-square.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="07-temporal-controller.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["manual.pdf", "manual.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
