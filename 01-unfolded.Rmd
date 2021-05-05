@@ -1,0 +1,14 @@
+# Создание карты без специализированного программного обеспечения {#unfolded}
+
+Первое занятие посвящено общим принципам построения карт и созданию карт с помощью сервиса [unfolded.ai](unfolded.ai).
+
+Этот сервис позволяет делать карты прямо в браузере, для того, чтобы им воспользоваться нужно зарегистрироваться на сайте <https://studio.unfolded.ai/home>
+
+Подробно про работу с сервисом я рассказывала на мастер-классе в рамках Дня открытых данных. Запись можно посмотреть ниже.
+
+```{=html}
+<iframe width="800" height="400" src="https://www.youtube.com/embed/iwXWGcNwRbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+Для работы можно воспользоваться данными из [репозитори](https://github.com/baltti/opendataday-21)я или [данными](https://drive.google.com/file/d/171Ts_FX2DFOojv0ru7ApN0wXWhMFVtcF/view?usp=sharing), которые будут применяться для дальнейшей работы в рамках курса. Оба набора аналогичны: они содержат названия сетевых супермаркетов и их координаты (широту и долготу), первый набор для Москвы, второй - для Санкт-Петербурга.
+
+Данные © OpenStreetMap contributors

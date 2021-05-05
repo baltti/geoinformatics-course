@@ -1,0 +1,18 @@
+book_filename: "manual"
+rmd_files:
+    - "index.Rmd"
+    - "01-unfolded.Rmd"
+    - "02-qgis-basics.Rmd"
+    - "03-grid.Rmd"
+    - "04-overpass.Rmd"
+    - "05-square.Rmd"
+    - "06-buffer-overlay.Rmd"
+    - "07-temporal-controller.Rmd"
+    - "08-interpolation.Rmd"
+    - "09-DEM.Rmd"
+    - "manual.Rmd"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: " "
+    
